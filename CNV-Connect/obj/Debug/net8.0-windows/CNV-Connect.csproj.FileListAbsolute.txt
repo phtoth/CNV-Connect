@@ -1,0 +1,17 @@
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\CNV-Connect.exe
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\CNV-Connect.deps.json
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\CNV-Connect.runtimeconfig.json
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\CNV-Connect.dll
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\CNV-Connect.pdb
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV_Connect.frmMain.resources
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.csproj.GenerateResource.cache
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.AssemblyInfoInputs.cache
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.AssemblyInfo.cs
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.csproj.CoreCompileInputs.cache
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.sourcelink.json
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.dll
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\refint\CNV-Connect.dll
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.pdb
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.genruntimeconfig.cache
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\ref\CNV-Connect.dll
