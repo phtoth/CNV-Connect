@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\serialcomm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\serialcomm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,6 +27,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
+              "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
+              "RelativeToolTip": "CNV-Connect\\Form1.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIAwwDsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T21:49:39.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SerialComm.cs",
+              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\SerialComm.cs",
+              "RelativeDocumentMoniker": "CNV-Connect\\SerialComm.cs",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\SerialComm.cs",
+              "RelativeToolTip": "CNV-Connect\\SerialComm.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwDMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T21:44:44.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
               "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
