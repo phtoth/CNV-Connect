@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,18 @@ using System.Windows.Forms;
 
 namespace CNV_Connect
 {
-    static class SerialComm
+    static public class SerialComm
     {
         // vetor contendo as portas seriais disponiveis
         // vector containing the available serial ports 
         public static string[] ports = SerialPort.GetPortNames();
         public static string Board_Version = "";
-       
+
+        public static SerialPort _serialPortConnection;
+
+        public static Thread Glados = new Thread(SerialComm.SerialReceive);
+
+        public static bool SAlive = false;
 
         // Testa a Conexão com a Porta Serial
         // Test the Serial Port Connection
@@ -64,8 +70,51 @@ namespace CNV_Connect
 
             _serialPortConnectionTest.Close();
         }
-    
 
+        // Um teste de conexão serial a ser executado periodicamente
+        public static void StillAlive(string Port)
+        {
 
+        }
+
+        // Conexão Serial com a placa
+
+        public static void SerialConnet(string Port)
+        {
+            
+            SerialComm._serialPortConnection = new SerialPort();
+            SerialComm._serialPortConnection.PortName = Port;
+            SerialComm._serialPortConnection.BaudRate = 115200;
+            SerialComm._serialPortConnection.Open();
+
+            Thread.Sleep(50);
+        }
+
+        // Metodo de Envio de Dados
+        public static void SerialSend(string Data)
+        {
+            SerialComm._serialPortConnection.Write(Data);
+        }
+
+        // Metodo de Recebimento dos Dados
+        public static void SerialReceive()
+        {
+            while (true)
+            {
+                string data = _serialPortConnection.ReadExisting();
+                DataQueue.ReceivedData.Enqueue(data);
+                Thread.Sleep(50);
+            }
+        }
+
+        public static void StartSerialReceiveThread()
+        {
+            Glados.Start();
+        }
+
+        public static void StopSerialReceiveThread()
+        {
+            Glados.Abort();
+        }
     }
 }

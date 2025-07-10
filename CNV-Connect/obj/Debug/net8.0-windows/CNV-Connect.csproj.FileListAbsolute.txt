@@ -36,3 +36,6 @@ C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\D
 C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.IO.Ports.dll
 C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Connect.csproj.AssemblyReference.cache
 C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\obj\Debug\net8.0-windows\CNV-Conn.73294DD8.Up2Date
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\fsuipcClient.dll
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\protobuf-net.dll
+C:\Users\phtro\OneDrive\Documentos\Git\CNV-Connect\CNV-Connect\CNV-Connect\bin\Debug\net8.0-windows\protobuf-net.Core.dll

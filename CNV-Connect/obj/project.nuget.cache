@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Uy4tTz+PtjM=",
+  "dgSpecHash": "ZpjAotIeB/E=",
   "success": true,
   "projectFilePath": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\CNV-Connect.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phtro\\.nuget\\packages\\fsuipcclientdll\\3.3.16\\fsuipcclientdll.3.3.16.nupkg.sha512",
+    "C:\\Users\\phtro\\.nuget\\packages\\protobuf-net\\3.2.45\\protobuf-net.3.2.45.nupkg.sha512",
+    "C:\\Users\\phtro\\.nuget\\packages\\protobuf-net.core\\3.2.45\\protobuf-net.core.3.2.45.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\9.0.5\\runtime.android-arm.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\9.0.5\\runtime.android-arm64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\9.0.5\\runtime.android-x64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
@@ -21,6 +24,7 @@
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.5\\runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-x64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
+    "C:\\Users\\phtro\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\phtro\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512"
   ],
   "logs": []

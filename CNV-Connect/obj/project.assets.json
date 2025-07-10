@@ -2,6 +2,57 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "FSUIPCClientDLL/3.3.16": {
+        "type": "package",
+        "dependencies": {
+          "protobuf-net": "3.2.45"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/fsuipcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/fsuipcClient.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "protobuf-net/3.2.45": {
+        "type": "package",
+        "dependencies": {
+          "protobuf-net.Core": "3.2.45"
+        },
+        "compile": {
+          "lib/net6.0/protobuf-net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/protobuf-net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "protobuf-net.Core/3.2.45": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.Immutable": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/protobuf-net.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/protobuf-net.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.android-arm.runtime.native.System.IO.Ports/9.0.5": {
         "type": "package",
         "runtimeTargets": {
@@ -1127,6 +1178,22 @@
           }
         }
       },
+      "System.Collections.Immutable/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.IO.Ports/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -1159,6 +1226,70 @@
     }
   },
   "libraries": {
+    "FSUIPCClientDLL/3.3.16": {
+      "sha512": "veXGqMhLOWs5Nmva82zSSTR3E6pRcthp2mfiyaz+o8OpYbjVznBU84zxsyTQiOkkLKC5Sq8l0fKhfdIOclJNRQ==",
+      "type": "package",
+      "path": "fsuipcclientdll/3.3.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "fsuipcclientdll.3.3.16.nupkg.sha512",
+        "fsuipcclientdll.nuspec",
+        "lib/net462/fsuipcClient.dll",
+        "lib/net462/fsuipcClient.xml",
+        "lib/net5.0-windows7.0/fsuipcClient.dll",
+        "lib/net5.0-windows7.0/fsuipcClient.xml",
+        "lib/net6.0-windows7.0/fsuipcClient.dll",
+        "lib/net6.0-windows7.0/fsuipcClient.xml",
+        "lib/net7.0-windows7.0/fsuipcClient.dll",
+        "lib/net7.0-windows7.0/fsuipcClient.xml",
+        "lib/net8.0-windows7.0/fsuipcClient.dll",
+        "lib/net8.0-windows7.0/fsuipcClient.xml"
+      ]
+    },
+    "protobuf-net/3.2.45": {
+      "sha512": "5UZ/ukUHcGbFSl7vNMrHsfjqdxusdd9w7w0fCEXzf3UUtsrGNVCzV5SmF+sCHAbnRV2qPcD1ixiDP7Aj8lX/HA==",
+      "type": "package",
+      "path": "protobuf-net/3.2.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/protobuf-net.dll",
+        "lib/net462/protobuf-net.xml",
+        "lib/net6.0/protobuf-net.dll",
+        "lib/net6.0/protobuf-net.xml",
+        "lib/netstandard2.0/protobuf-net.dll",
+        "lib/netstandard2.0/protobuf-net.xml",
+        "lib/netstandard2.1/protobuf-net.dll",
+        "lib/netstandard2.1/protobuf-net.xml",
+        "protobuf-net.3.2.45.nupkg.sha512",
+        "protobuf-net.nuspec",
+        "protobuf-net.png",
+        "readme.md"
+      ]
+    },
+    "protobuf-net.Core/3.2.45": {
+      "sha512": "PMWatW2NrT1uTXD7etJ4VdQ0wWZLFrIfdRGppD2QX7nzZ0+kIzqhq551u6ZiXJHWJgG4hWFEkSnUnt2aB6posg==",
+      "type": "package",
+      "path": "protobuf-net.core/3.2.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/protobuf-net.Core.dll",
+        "lib/net462/protobuf-net.Core.xml",
+        "lib/net6.0/protobuf-net.Core.dll",
+        "lib/net6.0/protobuf-net.Core.xml",
+        "lib/netstandard2.0/protobuf-net.Core.dll",
+        "lib/netstandard2.0/protobuf-net.Core.xml",
+        "lib/netstandard2.1/protobuf-net.Core.dll",
+        "lib/netstandard2.1/protobuf-net.Core.xml",
+        "protobuf-net.core.3.2.45.nupkg.sha512",
+        "protobuf-net.core.nuspec",
+        "protobuf-net.png",
+        "readme.md"
+      ]
+    },
     "runtime.android-arm.runtime.native.System.IO.Ports/9.0.5": {
       "sha512": "jdX92XbJ6rBTSPb3VwYRxDs6s5Vj9KcVDP6++6pVNF/D7OI13hgklUSVGMBRELpiC7SDEp/Bpsu980liACzC3g==",
       "type": "package",
@@ -1687,6 +1818,34 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Collections.Immutable/7.0.0": {
+      "sha512": "dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
+      "type": "package",
+      "path": "system.collections.immutable/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Collections.Immutable.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets",
+        "lib/net462/System.Collections.Immutable.dll",
+        "lib/net462/System.Collections.Immutable.xml",
+        "lib/net6.0/System.Collections.Immutable.dll",
+        "lib/net6.0/System.Collections.Immutable.xml",
+        "lib/net7.0/System.Collections.Immutable.dll",
+        "lib/net7.0/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "system.collections.immutable.7.0.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Ports/9.0.5": {
       "sha512": "Ni0EW9jqQVgnx+v5XH/TFbahQF2lRXLQRe4OYFwxuMLLTOkkdOO8zGV3DiG18tCCo2ojpRqBaDGkt0MADQ4ITw==",
       "type": "package",
@@ -1726,6 +1885,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "FSUIPCClientDLL >= 3.3.16",
       "System.IO.Ports >= 9.0.5"
     ]
   },
@@ -1779,6 +1939,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "FSUIPCClientDLL": {
+            "target": "Package",
+            "version": "[3.3.16, )"
+          },
           "System.IO.Ports": {
             "target": "Package",
             "version": "[9.0.5, )"
@@ -1803,7 +1967,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
