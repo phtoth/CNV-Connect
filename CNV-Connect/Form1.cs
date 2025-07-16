@@ -1,7 +1,8 @@
-using System.IO.Ports;
-using System.IO;
-using System.Text.Json;
 using FSUIPC;
+using System.IO;
+using System.IO.Ports;
+using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace CNV_Connect
 {
@@ -23,6 +24,12 @@ namespace CNV_Connect
         string SelSoftware = "";
 
         List<HWModules> HardwareList = new List<HWModules>();
+
+        Dictionary<int, string> InputCodeList = new Dictionary<int, string>();
+        Dictionary<int, string> InputCommandList = new Dictionary<int, string>();
+
+        Dictionary<int, string> OutputCodeList = new Dictionary<int, string>();
+        Dictionary<int, string> OutputCommandList = new Dictionary<int, string>();
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -228,16 +235,70 @@ namespace CNV_Connect
    
                 if (NewModule.AircraftManufacturer == SelManufacturer && NewModule.AircraftModel == SelAircraft && NewModule.AircraftVariant == SelSoftware)
                 {
-                    HardwareList.Append(NewModule);
+                    HardwareList.Add(NewModule);
                 }
                 else
                 {
                     MessageBox.Show("Erro ao carregar módulo de Hardware. Arquivo com erro de configuração.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     NewModule = null;
                 }
-
             }
 
+            if (HardwareList.Count > 0)
+            {
+                foreach (var HWModules in HardwareList)
+                {
+                    foreach (var HW_Item in HWModules.BoardData.EnumerateObject())
+                    {
+                        string CHeckInOut = HW_Item.ToString();
+                        if (CHeckInOut.Contains("Input"))
+                        {
+                            JsonDocument doc_01 = JsonDocument.Parse(HW_Item.Value.GetRawText());
+                            JsonElement root_01 = doc_01.RootElement;
+
+                            foreach (JsonProperty Item in root_01.EnumerateObject())
+                            {
+                                JsonDocument doc_02 = JsonDocument.Parse(Item.Value.GetRawText());
+                                JsonElement root_02 = doc_02.RootElement;
+
+                                int InputMapCode = int.Parse(root_02.GetProperty("Map_Code").GetString());
+                                string InputCommand = root_02.GetProperty("Map_CMD").GetString();
+
+                                if(!InputCodeList.ContainsKey(InputMapCode))
+                                {
+                                    InputCodeList.Add(InputMapCode, InputCommand);
+                                    InputCommandList.Add(InputMapCode, InputCommand);
+                                }
+                            }
+
+
+                        }
+                        else if (CHeckInOut.Contains("Output"))
+                        {
+                            JsonDocument doc_01 = JsonDocument.Parse(HW_Item.Value.GetRawText());
+                            JsonElement root_01 = doc_01.RootElement;
+
+                            foreach (JsonProperty Item in root_01.EnumerateObject())
+                            {
+                                JsonDocument doc_02 = JsonDocument.Parse(Item.Value.GetRawText());
+                                JsonElement root_02 = doc_02.RootElement;
+
+                                int InputMapCode = int.Parse(root_02.GetProperty("Map_Code").GetString());
+                                string InputCommand = root_02.GetProperty("Map_CMD").GetString();
+
+                                if (!InputCodeList.ContainsKey(InputMapCode))
+                                {
+                                    OutputCodeList.Add(InputMapCode, InputCommand);
+                                    OutputCommandList.Add(InputMapCode, InputCommand);
+                                }
+                            }
+                        }                              
+                    }
+
+                    //InputCodeList                  
+                    //InputCommandList
+                }
+            }
         }
 
         private void comboAircraftModel_SelectedIndexChanged(object sender, EventArgs e)

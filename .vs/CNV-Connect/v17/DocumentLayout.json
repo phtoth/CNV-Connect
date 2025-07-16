@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\boards\\airbus\\a320\\fenix\\overhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\boards\\airbus\\a320\\fenix\\overhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\boards\\boeing\\777\\pmdg\\radio.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\boards\\boeing\\777\\pmdg\\radio.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,19 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Projeto]",
+              "DocumentIndex": 4,
+              "Title": "HWModules.cs",
+              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\HWModules.cs",
+              "RelativeDocumentMoniker": "CNV-Connect\\HWModules.cs",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\HWModules.cs",
+              "RelativeToolTip": "CNV-Connect\\HWModules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T21:09:56.035Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
               "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
-              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs [Projeto]",
-              "RelativeToolTip": "CNV-Connect\\Form1.cs [Projeto]",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs [Design]",
+              "RelativeToolTip": "CNV-Connect\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T17:48:05.461Z",
-              "EditorCaption": " [Projeto]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -52,49 +65,34 @@
               "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
               "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
               "RelativeToolTip": "CNV-Connect\\Form1.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAtwOIAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAowB0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T21:49:39.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HWModules.cs",
-              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\HWModules.cs",
-              "RelativeDocumentMoniker": "CNV-Connect\\HWModules.cs",
-              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\HWModules.cs",
-              "RelativeToolTip": "CNV-Connect\\HWModules.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T21:09:56.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Radio.json",
-              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
-              "RelativeDocumentMoniker": "CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
-              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
-              "RelativeToolTip": "CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T17:41:09.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Overhead.json",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
               "RelativeDocumentMoniker": "CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
               "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
               "RelativeToolTip": "CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T17:42:19.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T17:42:19.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Radio.json",
+              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
+              "RelativeDocumentMoniker": "CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
+              "RelativeToolTip": "CNV-Connect\\Boards\\Boeing\\777\\PMDG\\Radio.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-10T17:41:09.718Z"
             }
           ]
         }

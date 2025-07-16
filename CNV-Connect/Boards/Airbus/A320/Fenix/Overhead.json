@@ -5,20 +5,15 @@
   "BoardType": "Overhead",
   "BoardData": {
     "Input": {
-      "Anti_Ice": {
-        "Wing": {
-          "Type": "Korry",
-          "Map_Code": "161",
-          "Map_CMD": "S_OH_PNEUMATIC_WING_ANTI_ICE"
-        }
+      "Wing": {
+        "Map_Code": "10161",
+        "Map_CMD": "S_OH_PNEUMATIC_WING_ANTI_ICE"
       }
     },
     "Output": {
-      "Anti_Ice": {
-        "Wing": {
-          "FAULT": "I_OH_PNEUMATIC_WING_ANTI_ICE_U",
-          "ON": "I_OH_PNEUMATIC_WING_ANTI_ICE_L"
-        }
+      "Wing": {
+        "10101": "I_OH_PNEUMATIC_WING_ANTI_ICE_U",
+        "10102": "I_OH_PNEUMATIC_WING_ANTI_ICE_L"
       }
     }
   }
