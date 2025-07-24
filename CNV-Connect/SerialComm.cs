@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.IO.Ports;
 
 namespace CNV_Connect
 {
@@ -81,7 +73,7 @@ namespace CNV_Connect
 
         public static void SerialConnet(string Port)
         {
-            
+
             SerialComm._serialPortConnection = new SerialPort();
             SerialComm._serialPortConnection.PortName = Port;
             SerialComm._serialPortConnection.BaudRate = 115200;
@@ -115,6 +107,7 @@ namespace CNV_Connect
         public static void StopSerialReceiveThread()
         {
             Glados.Abort();
+
         }
     }
 }

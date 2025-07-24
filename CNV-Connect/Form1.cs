@@ -1,7 +1,4 @@
 using FSUIPC;
-using System.IO;
-using System.IO.Ports;
-using System.Net.Http.Json;
 using System.Text.Json;
 
 namespace CNV_Connect
@@ -25,11 +22,8 @@ namespace CNV_Connect
 
         List<HWModules> HardwareList = new List<HWModules>();
 
-        Dictionary<int, string> InputCodeList = new Dictionary<int, string>();
-        Dictionary<int, string> InputCommandList = new Dictionary<int, string>();
-
-        Dictionary<int, string> OutputCodeList = new Dictionary<int, string>();
-        Dictionary<int, string> OutputCommandList = new Dictionary<int, string>();
+        Dictionary<int, string> InputList = new Dictionary<int, string>();
+        Dictionary<int, string> OutputList = new Dictionary<int, string>();
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -200,26 +194,8 @@ namespace CNV_Connect
             lvarNames.Sort();
         }
 
-        private void btnConnectSIM_Click(object sender, EventArgs e)
+        private void SimConnect()
         {
-            //DataQueue.Turret.Start();
-            //Thread.Sleep(100);
-            //SerialComm.SerialSend("ARE_YOU_STILL_THERE");
-
-            // desabilita os botões
-
-            btnConnectSIM.Enabled = false;
-
-            comboAircraftManufacturer.Enabled = false;
-            comboAircraftModel.Enabled = false; 
-            comboAircraftSoft.Enabled = false;
-
-            comboConnSerial.Enabled = false;
-
-            btnConnTest.Enabled = false;
-            btnConnectSerial.Enabled = false;
-
-
             // Conexão com o Simulador
 
 
@@ -232,7 +208,7 @@ namespace CNV_Connect
             {
                 string jsonContent = File.ReadAllText(Module);
                 HWModules NewModule = JsonSerializer.Deserialize<HWModules>(jsonContent)!;
-   
+
                 if (NewModule.AircraftManufacturer == SelManufacturer && NewModule.AircraftModel == SelAircraft && NewModule.AircraftVariant == SelSoftware)
                 {
                     HardwareList.Add(NewModule);
@@ -240,7 +216,6 @@ namespace CNV_Connect
                 else
                 {
                     MessageBox.Show("Erro ao carregar módulo de Hardware. Arquivo com erro de configuração.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    NewModule = null;
                 }
             }
 
@@ -261,13 +236,17 @@ namespace CNV_Connect
                                 JsonDocument doc_02 = JsonDocument.Parse(Item.Value.GetRawText());
                                 JsonElement root_02 = doc_02.RootElement;
 
-                                int InputMapCode = int.Parse(root_02.GetProperty("Map_Code").GetString());
-                                string InputCommand = root_02.GetProperty("Map_CMD").GetString();
-
-                                if(!InputCodeList.ContainsKey(InputMapCode))
+                                // Ensure the value is not null before parsing
+                                string? mapCodeString = root_02.GetProperty("Map_Code").GetString();
+                                if (!string.IsNullOrEmpty(mapCodeString))
                                 {
-                                    InputCodeList.Add(InputMapCode, InputCommand);
-                                    InputCommandList.Add(InputMapCode, InputCommand);
+                                    int InputMapCode = int.Parse(mapCodeString);
+                                    string? InputCommand = root_02.GetProperty("Map_CMD").GetString();
+
+                                    if (!InputList.ContainsKey(InputMapCode) && InputCommand != null)
+                                    {
+                                        InputList.Add(InputMapCode, InputCommand);
+                                    }
                                 }
                             }
 
@@ -283,22 +262,48 @@ namespace CNV_Connect
                                 JsonDocument doc_02 = JsonDocument.Parse(Item.Value.GetRawText());
                                 JsonElement root_02 = doc_02.RootElement;
 
-                                int InputMapCode = int.Parse(root_02.GetProperty("Map_Code").GetString());
-                                string InputCommand = root_02.GetProperty("Map_CMD").GetString();
-
-                                if (!InputCodeList.ContainsKey(InputMapCode))
+                                foreach (JsonProperty OutputItem in root_02.EnumerateObject())
                                 {
-                                    OutputCodeList.Add(InputMapCode, InputCommand);
-                                    OutputCommandList.Add(InputMapCode, InputCommand);
-                                }
-                            }
-                        }                              
-                    }
+                                    var CommandMap = JsonDocument.Parse(OutputItem.Value.GetRawText());
+                                    var CodeMap = JsonDocument.Parse(OutputItem.Name.ToString());
 
-                    //InputCodeList                  
-                    //InputCommandList
+                                    string OutputCommand = CommandMap.RootElement.ToString();
+                                    int OutputMapCode = int.Parse(CodeMap.RootElement.GetRawText());
+
+                                    if (!OutputList.ContainsKey(OutputMapCode))
+                                    {
+                                        OutputList.Add(OutputMapCode, OutputCommand);
+                                    }
+                                }
+
+                            }
+                        }
+                    }
                 }
             }
+        }
+
+        private void btnConnectSIM_Click(object sender, EventArgs e)
+        {
+            //DataQueue.Turret.Start();
+            //Thread.Sleep(100);
+            //SerialComm.SerialSend("ARE_YOU_STILL_THERE");
+
+            // desabilita os botões
+
+            btnConnectSIM.Enabled = false;
+
+            comboAircraftManufacturer.Enabled = false;
+            comboAircraftModel.Enabled = false;
+            comboAircraftSoft.Enabled = false;
+
+            comboConnSerial.Enabled = false;
+
+            btnConnTest.Enabled = false;
+            btnConnectSerial.Enabled = false;
+
+            SimConnect();
+
         }
 
         private void comboAircraftModel_SelectedIndexChanged(object sender, EventArgs e)
@@ -352,7 +357,8 @@ namespace CNV_Connect
 
                     if (root.TryGetProperty("BoardType", out JsonElement boardTypeElement))
                     {
-                        string boardType = boardTypeElement.GetString();
+                        // Updated the line to handle possible null values safely by using the null-coalescing operator.
+                        string boardType = boardTypeElement.GetString() ?? string.Empty;
 
                         switch (boardType)
                         {
@@ -398,9 +404,10 @@ namespace CNV_Connect
         {
             if (comboAircraftSoft.Items.Count > 0)
             {
-                SelManufacturer = comboAircraftManufacturer.SelectedItem.ToString();
-                SelAircraft = comboAircraftModel.SelectedItem.ToString();
-                SelSoftware = comboAircraftSoft.SelectedItem.ToString();
+                SelManufacturer = comboAircraftManufacturer.SelectedItem?.ToString()!;
+                SelAircraft = comboAircraftModel.SelectedItem?.ToString()!;
+                SelSoftware = comboAircraftSoft.SelectedItem?.ToString()!;
+
 
                 CheckModules();
             }
