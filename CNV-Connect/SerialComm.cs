@@ -11,7 +11,9 @@ namespace CNV_Connect
 
         public static SerialPort _serialPortConnection;
 
-        public static Thread Glados = new Thread(SerialComm.SerialReceive);
+        public static CancellationTokenSource GladosToken = new();
+
+        public static Thread Glados = new Thread(() => SerialReceive(GladosToken.Token));
 
         public static bool SAlive = false;
 
@@ -89,9 +91,9 @@ namespace CNV_Connect
         }
 
         // Metodo de Recebimento dos Dados
-        public static void SerialReceive()
+        public static void SerialReceive(CancellationToken token)
         {
-            while (true)
+            while (!token.IsCancellationRequested)
             {
                 string data = _serialPortConnection.ReadExisting();
                 DataQueue.ReceivedData.Enqueue(data);
@@ -106,8 +108,10 @@ namespace CNV_Connect
 
         public static void StopSerialReceiveThread()
         {
-            Glados.Abort();
-
+            GladosToken.Cancel();
+            Glados.Join();
+            GladosToken.Dispose();
+            Thread.Sleep(1500);
         }
     }
 }

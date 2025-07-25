@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CNV-Connect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1e35f4da1cc88004f42f31d3d55818af7e26dc3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e637d2a9e0b1bd5b7b06b098b343faa7ba6799bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CNV-Connect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CNV-Connect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

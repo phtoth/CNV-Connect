@@ -34,6 +34,19 @@ namespace CNV_Connect
             InitMSFSServices();
         }
 
+        private void SendToSim(int CodeMap, int Value)
+        {
+            if(InputList.ContainsKey(CodeMap))
+            {
+               string Command = InputList[CodeMap];
+                if (Command != null)
+                {
+                    FsLVar lvar = MSFSVariableServices.LVars[Command];
+                    lvar.SetValue(Value);
+                }
+            }
+        }
+
         // Carrega as aeronaves disponíveis no diretório Boards
         private void LoadAircrafts()
         {
@@ -250,7 +263,6 @@ namespace CNV_Connect
                                 }
                             }
 
-
                         }
                         else if (CHeckInOut.Contains("Output"))
                         {
@@ -277,6 +289,7 @@ namespace CNV_Connect
                                 }
 
                             }
+
                         }
                     }
                 }
@@ -421,15 +434,7 @@ namespace CNV_Connect
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FsLVar lvar = MSFSVariableServices.LVars["S_OH_PNEUMATIC_WING_ANTI_ICE"];
-            if (lvar != null)
-            {
-                double newVal = 0;
-                if (double.TryParse("1", out newVal))
-                {
-                    lvar.SetValue(newVal);
-                }
-            }
+            SendToSim(10161, 1);
         }
 
     }
