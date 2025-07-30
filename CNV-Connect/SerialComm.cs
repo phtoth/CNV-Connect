@@ -93,11 +93,27 @@ namespace CNV_Connect
         // Metodo de Recebimento dos Dados
         public static void SerialReceive(CancellationToken token)
         {
+            string data = "";
             while (!token.IsCancellationRequested)
             {
-                string data = _serialPortConnection.ReadExisting();
-                DataQueue.ReceivedData.Enqueue(data);
-                Thread.Sleep(50);
+                try
+                {
+                    data = _serialPortConnection.ReadLine().Split('\r')[0];
+                }
+                catch (System.IO.IOException error)
+                {
+                    Console.WriteLine($"Serial port error: {error.Message}");
+                }
+                catch (System.InvalidOperationException error)
+                {
+                    Console.WriteLine($"Serial port error: {error.Message}");
+                }
+
+                if (data != null && data != "")
+                {
+                    DataQueue.ReceivedData.Enqueue(data);
+                    Thread.Sleep(50);
+                }
             }
         }
 

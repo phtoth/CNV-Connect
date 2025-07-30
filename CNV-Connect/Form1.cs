@@ -32,6 +32,9 @@ namespace CNV_Connect
             //btnConnectSIM.Enabled = false;
             LoadAircrafts();
             InitMSFSServices();
+
+            DataQueue.SendToSimDelegate = SendToSim;
+
         }
 
         private void SendToSim(int CodeMap, int Value)
@@ -298,8 +301,8 @@ namespace CNV_Connect
 
         private void btnConnectSIM_Click(object sender, EventArgs e)
         {
-            //DataQueue.Turret.Start();
-            //Thread.Sleep(100);
+            DataQueue.Turret.Start();
+            Thread.Sleep(100);
             //SerialComm.SerialSend("ARE_YOU_STILL_THERE");
 
             // desabilita os botões
@@ -434,7 +437,7 @@ namespace CNV_Connect
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SendToSim(10161, 1);
+            
         }
 
     }
