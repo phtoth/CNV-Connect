@@ -10,36 +10,61 @@ namespace CNV_Connect
             InitializeComponent();
         }
 
+        // Variáveis de controle
         bool SerialState = false;
         bool SIMState = false;
+
+        // Lista de fabricantes e aeronaves
         string[] ManufacturerList = [];
+
+        // Lista de aeronaves e módulos
         List<string> AircraftList = new List<string>();
         List<string> ModuleList = new List<string>();
 
+        // Variáveis selecionadas pelo usuário
+        // Selected variables by the user
         string SelManufacturer = "";
         string SelAircraft = "";
         string SelSoftware = "";
 
+        // Lista de módulos de hardware
+        // List of hardware modules
         List<HWModules> HardwareList = new List<HWModules>();
 
+        // Dicionários para armazenar os comandos de entrada e saída
+        // Dictionaries to store input and output commands
         Dictionary<int, string> InputList = new Dictionary<int, string>();
         Dictionary<int, string> OutputList = new Dictionary<int, string>();
 
+        // Evento de carregamento do formulário
+        // Form load event
         private void frmMain_Load(object sender, EventArgs e)
         {
+            // Carrega as portas seriais disponíveis e aeronaves
+            // Loads the available serial ports and aircrafts
             LoadComPorts();
+
+            // Desabilita os botões de conexão com o Simulador e Placa
+            // Disables the buttons for connecting to the Simulator and Board
             btnConnectSerial.Enabled = false;
             //btnConnectSIM.Enabled = false;
             LoadAircrafts();
+
+            // Inicia o serço de variáveis do MSFS
+            // Initializes the MSFS variable service
             InitMSFSServices();
 
+            // Configura o evento de envio de dados para o simulador
             DataQueue.SendToSimDelegate = SendToSim;
-
         }
 
+        // Método que envia os dados para o simulador
+        // Method that sends data to the simulator
         private void SendToSim(int CodeMap, int Value)
         {
-            if(InputList.ContainsKey(CodeMap))
+            // Verifica se o código de mapeamento existe na lista de entradas
+            // Checks if the mapping code exists in the input list
+            if (InputList.ContainsKey(CodeMap))
             {
                string Command = InputList[CodeMap];
                 if (Command != null)
@@ -51,12 +76,24 @@ namespace CNV_Connect
         }
 
         // Carrega as aeronaves disponíveis no diretório Boards
+        // Loads the available aircrafts from the Boards directory
+        // ToDo: Melhorar o carregamento das aeronaves para evitar problemas de performance
+        // ToDo: Improve the loading of aircrafts to avoid performance issues
+        // ToDo: Talvez mudar o formato de armazenamento das aeronaves
+        // ToDo: Maybe change the storage format of aircrafts
         private void LoadAircrafts()
         {
+            // Carrega o diretório de fabricantes de aeronaves
+            // Loads the aircraft manufacturers directory
             string[] ManufacturerListTemp = System.IO.Directory.GetDirectories("../../../Boards/");
+
+            // Verifica se o diretório de fabricantes está vazio
+            // Checks if the manufacturers directory is empty
             int ManufacturerListSize = ManufacturerListTemp.Length;
             string[] AircraftListTemp = [];
 
+            // Se houver fabricantes, adiciona-os ao ComboBox e à lista de aeronaves
+            // If there are manufacturers, adds them to the ComboBox and the aircraft list
             if (ManufacturerListSize > 0)
             {
                 foreach (string Item in ManufacturerListTemp)
@@ -128,6 +165,8 @@ namespace CNV_Connect
             comboConnSerial.SelectedIndex = 0;
         }
 
+        // Evento de clique do botão de teste de conexão
+        // Click event for the connection test button
         private void btnConnTest_Click(object sender, EventArgs e)
         {
             // Muda o cursor do mouse para o modo de espera
@@ -156,6 +195,8 @@ namespace CNV_Connect
             }
             else
             {
+                // Se não conseguir se comunicar com a placa, exibe uma mensagem de erro
+                // If it fails to communicate with the board, displays an error message
                 string message = "Nenhuma Placa Encontrada.";
                 string title = "Erro";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -166,7 +207,8 @@ namespace CNV_Connect
         }
 
 
-
+        // Evento de clique do botão de conexão serial
+        // Click event for the serial connection button
         private void btnConnectSerial_Click(object sender, EventArgs e)
         {
             //tmrStillAlive.Enabled = true;
@@ -188,11 +230,15 @@ namespace CNV_Connect
             }
         }
 
+        // Timer que verifica se o CNV-Connect está ativo
+        // Timer that checks if CNV-Connect is active
         private void tmrStayinAlive_Tick(object sender, EventArgs e)
         {
 
         }
 
+        // Método que inicializa os serviços de variáveis do MSFS
+        // Method that initializes the MSFS variable services
         private void InitMSFSServices()
         {
             // Handle events
@@ -201,24 +247,40 @@ namespace CNV_Connect
             //MSFSVariableServices.OnValuesChanged += VS_OnValuesChanged; // Fired when any LVAR value changes
             // Initialise and start
 
-            MSFSVariableServices.Init(); // Initialise 
+            // Inicializa e inicia o serviço de variáveis do MSFS
+            // Initializes and starts the MSFS variable service
+            MSFSVariableServices.Init();
+
+            // Seta o nível de log
+            // Sets the log level
             MSFSVariableServices.LogLevel = LOGLEVEL.LOG_LEVEL_INFO; // Set the level of logging
 
+            // Inicia o serviço de variáveis do MSFS
+            // Starts the MSFS variable service
             MSFSVariableServices.Start();
 
+            // Obtém a lista de variáveis LVAR disponíveis
+            // Gets the list of available LVAR variables
             List<string> lvarNames = new List<string>(MSFSVariableServices.LVars.Names);
+
+            // Ordena a lista de variáveis LVAR
+            // Sorts the list of LVAR variables
             lvarNames.Sort();
         }
 
+        // Método de Conexão com o Simulador
+        // Method to connect to the simulator
         private void SimConnect()
         {
-            // Conexão com o Simulador
-
-
-
             // Leitura dos módulos de hardware
+            // Reading the hardware modules
             string ModulePath = "../../../Boards/" + SelManufacturer + "/" + SelAircraft + "/" + SelSoftware + "/";
             string[] ModulesList = System.IO.Directory.GetFiles(ModulePath);
+
+            // Carrega os módulos de hardware encontrados
+            // Loads the found hardware modules
+            // ToDo: Melhorar o carregamento dos módulos para evitar problemas de performance
+            // ToDo: Improve the loading of modules to avoid performance issues
 
             foreach (string Module in ModulesList)
             {
@@ -290,15 +352,15 @@ namespace CNV_Connect
                                         OutputList.Add(OutputMapCode, OutputCommand);
                                     }
                                 }
-
                             }
-
                         }
                     }
                 }
             }
         }
 
+        // Evento de clique do botão de conexão com o Simulador
+        // Click event for the simulator connection button
         private void btnConnectSIM_Click(object sender, EventArgs e)
         {
             DataQueue.Turret.Start();
@@ -322,6 +384,8 @@ namespace CNV_Connect
 
         }
 
+        // Evento de mudança de seleção do ComboBox de Modelos de Aeronaves
+        // ComboBox selection change event for Aircraft Models
         private void comboAircraftModel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboAircraftManufacturer.Items.Count > 0)
@@ -348,9 +412,11 @@ namespace CNV_Connect
         }
 
         // Verifica se o módulo de simulação está instalado
+        // Checks if the simulation module is installed
         private void CheckModules()
         {
             // Lista os módulos instalados no diretório Modules
+            // Lists the installed modules in the Modules directory
             string ModulePath = "../../../Boards/" + SelManufacturer + "/" + SelAircraft + "/" + SelSoftware + "/";
             string[] ModulesListTemp = System.IO.Directory.GetFiles(ModulePath);
 
@@ -374,8 +440,11 @@ namespace CNV_Connect
                     if (root.TryGetProperty("BoardType", out JsonElement boardTypeElement))
                     {
                         // Updated the line to handle possible null values safely by using the null-coalescing operator.
+                        // Atualizado para lidar com valores nulos possíveis usando o operador de coalescência nula.
                         string boardType = boardTypeElement.GetString() ?? string.Empty;
 
+                        // Verifica o tipo de placa e marca o checkbox correspondente
+                        // Checks the board type and marks the corresponding checkbox
                         switch (boardType)
                         {
                             case "Overhead":
@@ -390,9 +459,12 @@ namespace CNV_Connect
             }
         }
 
+        // Evento de mudança de seleção do ComboBox de Fabricantes de Aeronaves
+        // ComboBox selection change event for Aircraft Manufacturers
         private void comboAircraftManufacturer_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Limpa o ComboBox de Modelos de Aeronaves e Fabricantes
+            // Clears the Aircraft Models and Manufacturers ComboBoxes
             comboAircraftModel.Items.Clear();
             comboAircraftSoft.Items.Clear();
 
@@ -410,12 +482,16 @@ namespace CNV_Connect
             ClearModules();
         }
 
+        // Limpa os checkboxes dos módulos de hardware
+        // Clears the checkboxes of the hardware modules
         private void ClearModules()
         {
             cbOverhead.Checked = false;
             cbRadio.Checked = false;
         }
 
+        // Evento de mudança de seleção do ComboBox de Softwares de Aeronaves
+        // ComboBox selection change event for Aircraft Software
         private void comboAircraftSoft_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboAircraftSoft.Items.Count > 0)
@@ -434,11 +510,5 @@ namespace CNV_Connect
                 SelSoftware = "";
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
     }
 }

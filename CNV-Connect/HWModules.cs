@@ -1,4 +1,7 @@
-﻿using System.Text.Json;
+﻿// Classe para a deserialização do JSON
+// Class for JSON deserialization
+
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace CNV_Connect

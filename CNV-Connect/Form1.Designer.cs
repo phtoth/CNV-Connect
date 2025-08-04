@@ -53,7 +53,6 @@
             groupBox4 = new GroupBox();
             cbRadio = new CheckBox();
             cbOverhead = new CheckBox();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -305,22 +304,11 @@
             cbOverhead.Text = "Overhead";
             cbOverhead.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            button1.Location = new Point(107, 804);
-            button1.Name = "button1";
-            button1.Size = new Size(209, 49);
-            button1.TabIndex = 5;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(576, 865);
-            Controls.Add(button1);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -367,6 +355,5 @@
         private GroupBox groupBox4;
         private CheckBox cbOverhead;
         private CheckBox cbRadio;
-        private Button button1;
     }
 }
