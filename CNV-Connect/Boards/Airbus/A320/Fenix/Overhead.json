@@ -13,7 +13,8 @@
     "Output": {
       "Wing": {
         "10101": "I_OH_PNEUMATIC_WING_ANTI_ICE_U",
-        "10102": "I_OH_PNEUMATIC_WING_ANTI_ICE_L"
+        "10102": "I_OH_PNEUMATIC_WING_ANTI_ICE_L",
+        "10103": "N_ELEC_VOLT_BAT_1"
       }
     }
   }

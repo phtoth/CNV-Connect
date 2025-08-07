@@ -247,6 +247,10 @@ namespace CNV_Connect
             //MSFSVariableServices.OnValuesChanged += VS_OnValuesChanged; // Fired when any LVAR value changes
             // Initialise and start
 
+            // Verifica quando devariável LVAR é alterada
+            // Checks when the LVAR variable is changed
+            MSFSVariableServices.OnValuesChanged += VS_OnValuesChanged;
+
             // Inicializa e inicia o serviço de variáveis do MSFS
             // Initializes and starts the MSFS variable service
             MSFSVariableServices.Init();
@@ -267,6 +271,91 @@ namespace CNV_Connect
             // Sorts the list of LVAR variables
             lvarNames.Sort();
         }
+
+        // Método que atualiza o valor em tempo real
+        // Method that updates the real-time value
+        private void VS_OnValuesChanged(object sender, EventArgs e)
+        {
+            this.Invoke(new Action(reportChangedLVars));
+        }
+
+        // Método que reporta as variáveis LVAR alteradas
+        // Method that reports the changed LVAR variables
+        private void reportChangedLVars()
+        {
+            // Varre a lista de variáveis LVAR alteradas, que foram mapeadas no dicionário OutputList
+            // Iterates through the list of changed LVAR variables that were mapped in the OutputList dictionary
+
+            foreach (FsLVar lvar in MSFSVariableServices.LVarsChanged)
+            {
+                if (OutputList.ContainsValue(lvar.Name))
+                {
+                    // Tratamos o valor recebido do LVAR
+                    // We process the value received from the LVAR
+                    string Data = ProcessMessage(lvar.Value.ToString("F6"));
+
+                    // Obtemos o código de mapeamento do LVAR a partir do dicionário OutputList
+                    // We get the mapping code of the LVAR from the OutputList dictionary
+                    int CodeMap = OutputList.FirstOrDefault(x => x.Value == lvar.Name).Key;
+
+                    // Aqui quramos o código de mapeamento em duas partes
+                    // Here we break the mapping code into two parts
+                    // Como o código é um inteiro com 5 dígitos, dividimos em duas partes, dividindo por 1000
+                    // Since the code is a 5-digit integer, we split it into two parts, dividing by 1000
+
+                    double BreakData = CodeMap / 1000;
+
+                    // a Part_01 é a parte inteira do código de mapeamento
+                    // Part_01 is the integer part of the mapping code
+                    // a Part_02 é o resto da divisão do código de mapeamento por 1000
+                    // Part_02 is the remainder of the mapping code divided by 1000
+                    int Part_01 = (int)BreakData;
+                    int Part_02 = CodeMap - (Part_01 * 1000);
+
+                    // Monta a mensagem a ser enviada para o CNV-Connect
+                    // Builds the message to be sent to CNV-Connect
+                    string Message = String.Concat("##", Part_01.ToString(), "#", Part_02.ToString(), "#", Data, "##");
+
+                    // Envia a mensagem para o CNV-Connect
+                    // Sends the message to CNV-Connect
+                    SerialComm.SerialSend(Message);
+                }
+            }
+        }
+
+        // Método que trata os dados recebidos do CNV-Connect
+        // Method that processes the data received from CNV-Connect
+        public static string ProcessMessage(string message)
+        {
+            if (string.IsNullOrWhiteSpace(message))
+                return "";
+
+            // Separar a parte inteira da decimal
+            string[] partes = message.Split(',');
+
+            if (partes.Length == 1)
+            {
+                // Sem vírgula, apenas inteiro
+                return partes[0];
+            }
+
+            string parteInteira = partes[0];
+            string parteDecimal = partes[1];
+
+            // Se todos os dígitos decimais são zero
+            if (parteDecimal.All(c => c == '0'))
+            {
+                return parteInteira;
+            }
+            else
+            {
+                // Remove zeros à direita da parte decimal
+                string decimalSemZeros = parteDecimal.TrimEnd('0');
+                return $"{parteInteira},{decimalSemZeros}";
+            }
+        }
+
+
 
         // Método de Conexão com o Simulador
         // Method to connect to the simulator

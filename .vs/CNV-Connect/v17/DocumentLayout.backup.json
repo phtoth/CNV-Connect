@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\dataqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\dataqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\boards\\airbus\\a320\\fenix\\overhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\boards\\airbus\\a320\\fenix\\overhead.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\serialcomm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\serialcomm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\hwmodules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|c:\\users\\phtro\\onedrive\\documentos\\git\\cnv-connect\\cnv-connect\\cnv-connect\\dataqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AFB8B87-BB10-48CC-BD61-14EF87103C52}|CNV-Connect\\CNV-Connect.csproj|solutionrelative:cnv-connect\\dataqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,14 +58,14 @@
               "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
               "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
               "RelativeToolTip": "CNV-Connect\\Form1.cs",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAawAACAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAgwD8BAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T21:49:39.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SerialComm.cs",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\SerialComm.cs",
               "RelativeDocumentMoniker": "CNV-Connect\\SerialComm.cs",
@@ -74,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "DataQueue.cs",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\DataQueue.cs",
               "RelativeDocumentMoniker": "CNV-Connect\\DataQueue.cs",
@@ -82,12 +86,11 @@
               "RelativeToolTip": "CNV-Connect\\DataQueue.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwDMAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T19:09:39.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T19:09:39.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Form1.cs",
               "RelativeDocumentMoniker": "CNV-Connect\\Form1.cs",
@@ -96,6 +99,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T17:48:05.461Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Overhead.json",
+              "DocumentMoniker": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
+              "RelativeDocumentMoniker": "CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
+              "ToolTip": "C:\\Users\\phtro\\OneDrive\\Documentos\\Git\\CNV-Connect\\CNV-Connect\\CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
+              "RelativeToolTip": "CNV-Connect\\Boards\\Airbus\\A320\\Fenix\\Overhead.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-06T20:40:20.514Z",
+              "EditorCaption": ""
             }
           ]
         }
